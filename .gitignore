@@ -1,0 +1,15 @@
+*.a
+*.d
+*.o
+*.pc
+.config
+.version
+config.asm
+config.fate
+config.h
+config.log
+config.mak
+libavdevice/libavdevice.ver
+libavformat/libavformat.ver
+libavutil/avconfig.h
+version.h
