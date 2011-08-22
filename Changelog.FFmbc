@@ -1,0 +1,100 @@
+FFmbc-0.6:
+- Sync on FFmpeg git 1762d9ced70ccc46c5d3e5d64e56a48d0fbbd4f7.
+- Fix auto-rotate iphone 4 files.
+- Increase maximum number of audio channel mappings to 64.
+- New "aspect" option to pad filter, to pad video to a specific display aspect ratio.
+- New parameter to crop filter to keep display aspect ratio when cropping.
+- Improve yuv 4:2:2 to rgb conversion quality.
+- Fix aspect ratio handling with libavfilter.
+- Re-enabled shared libraries support.
+- Fix DNxHD colors in Quicktime.
+- Print correct ratecontrol and bitrate information when encoding.
+- Write id3v2 v2.3 tags in mp3 files, compatible with Windows.
+- Support stream copying and muxing of AMR NB packed frames.
+- Flash F4V muxer, to allow muxing vp6 and mp3 the way Flash supports it.
+- Print progression time in hh:mm:ss.us instead of secs.
+- New "faststart" option in mov/mp4 muxer that automatically replace the header in front.
+- Print ETA if duration is known.
+- New "tinterlace" filter ported from mplayer.
+- Allow one video filter chain per output stream.
+- Fix yadif filter output, it was missing one frame previously.
+- New "imx50" and "imx30" targets, to make encoding simpler.
+- If audio channel count is less than 4 in MXF D10, automatically set it to 4.
+- Automatically set vbv buffer size to the maximum when encoding mpeg-2 cbr.
+- New "xdcamhd422" target.
+- Support DVCAM 4:2:0 in GXF.
+- Write aspect ratio information in GXF files.
+- With libx264 codec, correctly support specifying a custom 2pass log file.
+- When duplicating frames, correctly duplicate the previous frame.
+- Enhance -metadata option, can now take comma separated tag=value pairs.
+- Experimental mplayer filters support using -vf mp.
+- Mux DVCPRO HD in quicktime correctly.
+- Allow DNxHD encoding with Avid Nitris compatibility.
+- Fix decoding of 16bit png files.
+- Reenable -s commandline option.
+- New filter colormatrix to convert between bt 601 and bt 709.
+- Hide mmx/sse2 internal symbols, to allow creating a shared library from static libraries.
+- Support multiple external reference files per track in Quicktime files.
+- Fix -t and -vframes by considering output.
+- Mpeg-2 encoder now sets correct aspect ratio even with square pixels.
+- Mpeg-2 encoder now writes sequence display extension if color primaries are specified.
+- Dithering when downsampling from 10 bits to 8 bits.
+- Options are now reset between -i, output files and -newaudio,-newvideo parameters.
+- Display starting time code for MXF and Quicktime files.
+- Remove FFserver.
+- Fix Avisynth input audio stream timebase.
+
+FFmbc-0.5:
+- Sync on FFmpeg svn r25017.
+- Yadif video deinterlacing filter.
+- Overlay video filter.
+- Fade video filter.
+- Rename ffmpeg binary to ffmbc.
+- Disable shared libraries.
+- Remove -s resizing output cli option, use -vf scale.
+- 23.98 and 24 fps support in MXF muxer.
+- Mpeg-2 aspect ratio bitstream filter, to change aspect ratio without reencoding.
+- Fix an issue with -async and audiomerge.
+- Fix an issue with the fade filter.
+- Write interlacing information in mov files, fix deinterlacing with quicktime player.
+- Correctly support interlaced in yuv4mpeg and quicktime.
+- Display interlacing when printing information.
+- Fix an issue with resampling and audiomerge.
+
+FFmbc-0.4:
+- Sync on FFmpeg svn r21845.
+- Full support for reading and writing covert art in mp3 and iTunes m4a,m4v,mp4.
+- "-coverfile" commandline option to set a cover file. png,jpg,bmp supported.
+- Correctly write Quicktime metadata as utf-8.
+- Fixed a bug with temporal offset when muxing mpeg-2 long gop in MXF.
+- Huge speedup when opening Quicktime and mpeg-4 files.
+- Timecode for Quicktime and MXF files can now be set when stream copying.
+- Added x264 sources in contrib directory, git 5b86182d1240b441f28462abf3d40b7371de5ba3
+- Enable pthreads by default.
+- Fixed a bug with interlaced VC-3 decoding.
+- Integrate libavfilter. New commandline option -vf, see doc/libavfiter.texi
+- Auto-rotate iPhone 3GS files.
+- Support lyrics in mp3 and iTunes m4a,m4v,mp4.
+- Automatically set current UTC time in created files.
+- New AVFMT_HAS_PTS flag in AVInputFormat to specify that format has pts.
+- Write and read metadata "reel_name" in mov timecode track if present.
+- MPEG TS muxer now produces streams playable by VLC and Quicktime.
+
+FFmbc-0.3:
+- Sync on FFmpeg svn r20539.
+- Write Quicktime timecode track.
+- Set closed gop flag for first gop when encoding with b frames.
+- Search relative path when open Quicktime reference files.
+
+FFmbc-0.2:
+- Sync on FFmpeg svn r19958.
+- Advanced Metadata support.
+- S302M decoder.
+- XDCAM HD 422 muxer.
+- MXF 720p muxing.
+- New RM demuxer.
+
+FFmbc-0.1:
+- D10/IMX bitstream filter to remove klv header from D10/IMX elementary stream to be copied in MXF.
+- "-map_audio_channel" commandline option to split and merge audio channels.
+- "-timecode" commandline option to set timecode start when encoding.
