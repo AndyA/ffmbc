@@ -3,6 +3,8 @@
 *.dylib
 *.o
 *.pc
+*.so
+*.so.*
 *.ver
 .*.swp
 .config
@@ -13,5 +15,9 @@ config.fate
 config.h
 config.log
 config.mak
+ffmbc
+ffmbc_g
+ffprobe
+ffprobe_g
 libavutil/avconfig.h
 version.h
