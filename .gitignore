@@ -20,4 +20,5 @@ ffmbc_g
 ffprobe
 ffprobe_g
 libavutil/avconfig.h
+tags
 version.h
